@@ -13,10 +13,9 @@ const onUpload = useFileUpload((files) => {
 The hook also takes optional parameters to filter the file types and multiple file selection.
 
 ```tsx
-const onUpload = useFileUpload(
-        (file) => {
-            console.log(file);
-        },
-        { fileTypes: ['.jpg', '.png'], multiple: true }
-    );
+const uploadOptions = { fileTypes: ['.jpg', '.png'], multiple: true };
+
+const onUpload = useFileUpload((files) => {
+        console.log(files);
+}, uploadOptions);
 ```
